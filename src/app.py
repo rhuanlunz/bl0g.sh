@@ -1,11 +1,11 @@
 from time import localtime, strftime
-from os import path, listdir
+from os import path, listdir, getcwd
 
 from mistune import html
 from werkzeug.exceptions import NotFound
 from flask import Flask, render_template, redirect
 
-ARTICLES_FOLDER = 'articles/'
+ARTICLES_FOLDER = getcwd() + '/articles/'
 
 app = Flask(__name__)
 app.template_folder = 'views/pages'
