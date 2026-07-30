@@ -1,0 +1,54 @@
+main {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#neofetch-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--foreground-color);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+}
+
+#neofetch-text-list > .neofetch-text {
+    display: list-item;
+    list-style: none;
+}
+
+.neofetch-text {
+    color: var(--primary-text-color);
+}
+
+.neofetch-labels {
+    color: var(--secondary-text-color);
+}
+
+/* https://ibelick.com/blog/create-animated-gradient-borders-with-css */
+#profile-pic {
+    height: 256px;
+    width: 256px;
+    border: 1px solid #0000;
+    background: linear-gradient(#131219, #131219) padding-box, linear-gradient(
+        var(--angle),
+        var(--border-color),
+        var(--primary-color)
+        ) border-box;
+    animation: 2s rotate linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}

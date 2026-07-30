@@ -1,0 +1,16 @@
+<nav id="navigation-bar">
+    <ul id="navigation-list">
+        <li class="navigation-list-item {{ 'selected' if '/' == request.path else '' }} ">
+            <a href="{{ url_for('index') }}">home</a>
+        </li>
+        
+        <li class="navigation-list-item {{ 'selected' if '/artigo' in request.path else '' }}">
+            <a href="{{ url_for('articles') }}">artigos</a>
+        </li>
+        
+        <!-- next version
+        <li class="navigation-list-item {{ 'selected' if 'whoami' in request.path else '' }}">
+            <a href="/whoami">whoami</a>
+        </li> -->
+    </ul>
+</nav>

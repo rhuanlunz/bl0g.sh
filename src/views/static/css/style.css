@@ -1,0 +1,95 @@
+@import url('font.css');
+
+:root {
+    --background-color: #0a0a0a;
+    --foreground-color: #0f0f0f;
+    --border-color: #2f2f2f;
+    --square-border-color: #2f2f2f44;
+
+    --primary-color: #ff002f;
+    
+    --primary-text-color: #ffbac8;
+    --secondary-text-color: #846161;
+}
+
+* {
+    font-family: 'JetBrains Mono'; 
+}
+
+html {
+    font-size: 1.2rem;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(var(--square-border-color) 1px, transparent 1px), linear-gradient(to right, var(--square-border-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+    min-height: 100dvh;
+}
+
+#global-footer {
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: 5px;
+    font-size: 0.6rem;
+    color: var(--secondary-text-color);
+}
+
+#navigation-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-text-color);
+    height: 50px;
+    font-weight: bold;
+}
+
+#navigation-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+    margin: 0;
+    padding: 0 20px;
+    background-color: var(--foreground-color);
+    border: 1px solid var(--border-color);
+}
+
+.navigation-list-item {
+    list-style: none;
+    cursor: pointer;
+    transition: color .3s;
+}
+.navigation-list-item > a {
+    text-decoration: none;
+    color: inherit;
+}
+.navigation-list-item:hover {
+    color: var(--primary-text-color);
+}
+.navigation-list-item.selected {
+    color: var(--primary-color);
+}
+
+/* https://divhunt.com/blog/typewriter-effect-css */
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 12px solid;
+    width: 0;
+    animation:
+        typing 2s steps(20) forwards,
+        blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}

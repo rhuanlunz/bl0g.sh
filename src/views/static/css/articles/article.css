@@ -1,0 +1,20 @@
+body {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+#article-title {
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+#article-modification-time {
+    margin: 0 0 50px 0;
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+    text-align: center;
+}

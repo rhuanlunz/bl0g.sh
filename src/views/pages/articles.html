@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>bl0g.sh</title>
+		
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/articles/article-list.css') }}">
+	</head>
+	<body>
+		<header>
+			{% include 'components/navbar.html' %}
+		</header>
+		
+		{% if article_list %}
+			<main>
+				{% for article in article_list %}
+					<div class="article-container">
+						<header>
+							<h2 class="article-title">{{ article['name'] }}</h2>
+						</header>
+
+						<footer>
+							<div class="left">
+								<p class="article-modification-date">{{ article['modification_time'] }}</p>
+							</div>
+
+							<div class="right">
+								<a class="article-link" href="{{ url_for('article', article_name=article['name']) }}">-></a>
+							</div>
+						</footer>
+					</div>
+				{% endfor %}
+			</main>
+		{% else %}
+			<span id="nothing">0x67 - bl0g.sh: sem artigos</span>
+		{% endif %}
+
+		<footer id="global-footer">
+			<p>$ ./blog.sh --version=1.0</p>
+		</footer>
+	</body>
+</html>

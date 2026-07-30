@@ -1,0 +1,20 @@
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+}
+
+.blog-title {
+    color: var(--primary-color);
+    font-size: 3rem;
+    text-shadow: 5px 5px 0 black;
+    margin: 0;
+}
+
+.blog-description {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    margin-top: 5px;
+}

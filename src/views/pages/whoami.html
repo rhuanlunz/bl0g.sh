@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>bl0g.sh</title>
+		
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/whoami/whoami.css') }}">
+	</head>
+	<body>
+		<header>
+			{% include 'components/navbar.html' %}
+		</header>
+
+		<main>
+			<section id="neofetch-section">
+				<picture>
+					<img id="profile-pic" src="{{ url_for('static', filename='images/pic.jpg') }}" alt="eu">
+				</picture>
+				
+				<div id="neofetch-text-list">
+					<span class="neofetch-text">lunxyz@bl0g.sh</span>
+					<span class="neofetch-text">--------------</span>
+					<span class="neofetch-text"><strong class="neofetch-labels">Name:</strong> Rhuan Lunz</span>
+					<span class="neofetch-text"><strong class="neofetch-labels">OS:</strong> Windows and Linux</span>
+					<span class="neofetch-text"><strong class="neofetch-labels">Tech Stack:</strong> Python, C#, JS</span>
+					<span class="neofetch-text"><strong class="neofetch-labels">Working At:</strong> FullStack Developer</span>
+				</div>
+			</section>
+
+			<section id="description-section">
+				E aí! meu nome é Rhuan, atualmente sou estudante de sistemas de informação, desenvolvedor .NET C# (estagiário) e entusiasta na área de cybersecurity.
+			</section>
+		</main>
+
+		<footer id="global-footer">
+			<p>$ ./blog.sh --version=1.0</p>
+		</footer>
+	</body>
+</html>
